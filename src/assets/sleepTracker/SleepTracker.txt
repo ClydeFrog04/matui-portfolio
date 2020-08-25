@@ -1,0 +1,9 @@
+Time spent: 9 days
+
+#Contributors: 3
+
+Duties: Implementing Routes and forms in a react app.
+
+Project description: Sleep Tracker is a Lambda School build week project that allows a user to monitor their sleep patterns by adding sleep data entries. A user can add data for a given night, and even start an entry that can be ended in the morning when they wake up and a new entry will be created.
+
+Stack: Reactjs, Styled Components, Contextapi

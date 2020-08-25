@@ -1,0 +1,9 @@
+Time spent: 9 days
+
+#Contributors: 4
+
+Duties: Connect front end app to the backend, App logic, styling, search functionality
+
+Project description: Secret Family Recipes is a Lambdaschool build week project. Secret Family recipes allows users to store all of their recipes in one place online, so they can be accessed anytime! A user can create, delete, and edit recipes
+
+Stack: Reactjs, Context api, typescript, Reactstrap/Bootstrap

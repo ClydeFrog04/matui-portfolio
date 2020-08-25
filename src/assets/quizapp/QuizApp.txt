@@ -1,0 +1,9 @@
+Time spent: 1 month
+
+#Contributors: 6
+
+Duties: Implementing a global state system with Context api, game logic, game state machine, some styling.
+
+Project description: Quizapp is a trivia game with many categories and difficulties. We built this project from the ground up, fully functional in just over a month. This was a good application of the skills we had learned in around 4 and a half months at Lambda school. 
+
+Stack: Reactjs, typescript, Context api, Material ui, express
