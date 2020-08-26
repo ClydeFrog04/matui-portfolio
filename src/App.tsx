@@ -5,6 +5,7 @@ import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import {Switch, Route} from "react-router-dom";
 import ProjectCard from "./components/project/ProjectCard";
 import {PortfolioContext} from "./contexts/portfolioContext";
+import ProjectPage from "./components/project/ProjectPage";
 
 function App() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -24,7 +25,7 @@ function App() {
             <Navbar/>
             <Switch>
                 <Route exact path={"/"}>
-                    <ProjectCard project={projects[0]}/>
+                    <ProjectPage/>
                 </Route>
             </Switch>
         </div>

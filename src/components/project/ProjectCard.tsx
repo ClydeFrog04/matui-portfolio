@@ -20,14 +20,17 @@ interface ProjectCardProps {
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {},
+        root: {
+        },
         media: {
-            height: 140
+            height: 238
+
         }
     }),
 );
 
 const ProjectCard: React.FC<ProjectCardProps> = ({project}) =>{
+    console.log("creating project card");
     const {images,
         name,
         timeSpent,
