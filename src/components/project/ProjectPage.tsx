@@ -43,9 +43,9 @@ const ProjectPage = () => {
                 <Paper className={classes.paper}>
                     <Grid container justify="center" alignItems="center" spacing={2}>
                         {
-                            projects?.map(project => {
+                            projects?.map((project, index) => {
                                 return (
-                                    <Grid item className={classes.card}>
+                                    <Grid key={index} item className={classes.card}>
                                         <ProjectCard project={project}/>
                                     </Grid>
                                 );

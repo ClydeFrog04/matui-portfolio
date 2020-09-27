@@ -11,6 +11,7 @@ import {
     Container, Box
 } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
+import {NavigationMenu} from "./NavigationMenu";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -55,16 +56,10 @@ const Navbar = (props:Props) => {
             <ElevationScroll {...props}>
                 <AppBar className={classes.appBar} position="fixed">
                     <Toolbar>
-                        <IconButton
-                            edge="start"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="menu"
-                            onClick={() => console.log("Running")}>
-                            <MenuIcon/>
-                        </IconButton>
+                        {/*todo: menu component goes here*/}
+                        <NavigationMenu/>
                         <Typography variant="h6" className={classes.title}>
-                            News
+                            Randy Egan
                         </Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
