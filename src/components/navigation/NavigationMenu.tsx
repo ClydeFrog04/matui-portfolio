@@ -1,9 +1,19 @@
 import React, {useState} from "react";
 import clsx from "clsx";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import {Button, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
+import {
+    Button,
+    Divider,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+} from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,6 +41,7 @@ export const NavigationMenu = () => {
         bottom: false,
         right: false,
     });
+    const [anchor, setAnchor] = useState<Anchor>("left");
 
     const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
@@ -73,7 +84,24 @@ export const NavigationMenu = () => {
     return (
         // todo: matui styling
         <div className="navigation-menu">
-            {(['left', 'right', 'top', 'bottom'] as Anchor[]).map((anchor) => (
+            <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(anchor, true)}
+            >
+                <MenuIcon/>
+            </IconButton>
+            <Drawer anchor={anchor} open={drawerState[anchor]} onClose={toggleDrawer(anchor, false)}>
+                {list(anchor)}
+            </Drawer>
+        </div>
+    );
+};
+
+/*
+{(["left", "right", "top", "bottom"] as Anchor[]).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
                     <Drawer anchor={anchor} open={drawerState[anchor]} onClose={toggleDrawer(anchor, false)}>
@@ -81,47 +109,4 @@ export const NavigationMenu = () => {
                     </Drawer>
                 </React.Fragment>
             ))}
-        </div>
-    );
-};
-
-/*
-export default function TemporaryDrawer() {
-
-
-  return (
-    <div>
-      {(['left', 'right', 'top', 'bottom'] as Anchor[]).map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
-    </div>
-  );
-}
-
- */
-
-
-/*
-<IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-                onClick={handleClick}>
-                <MenuIcon/>
-                <Menu
-                    open={menuVisible}
-                    id="navigation-menu"
-                    anchorEl={anchorEl}
-                    keepMounted
-                    onClose={handleClose}
-                >
-                    <MenuItem onClick={handleClose}>Projects</MenuItem>
-                </Menu>
-            </IconButton>
  */
