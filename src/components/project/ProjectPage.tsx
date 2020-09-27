@@ -1,7 +1,7 @@
 import React, {useContext} from "react"
 import Navbar from "../navigation/Navbar";
-import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import {Grid, Paper} from "@material-ui/core";
+import {createStyles, makeStyles, Theme, useTheme} from "@material-ui/core/styles";
+import {Grid, Paper, useMediaQuery} from "@material-ui/core";
 import {PortfolioContext} from "../../contexts/portfolioContext";
 import {IProject} from "../../interfaces/projectInterfaces";
 import ProjectCard from "./ProjectCard";
@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         card: {
             width: "50%",
+        [theme.breakpoints.down("sm")]: {
+                width: "75%"
+        },
         },
         pageBottomMargin:{...theme.mixins.toolbar},
     })
@@ -26,6 +29,11 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const ProjectPage = () => {
     const classes = useStyles();
+    const theme = useTheme();
+
+    const mobile = useMediaQuery(theme.breakpoints.down("sm"));
+    const tablet = useMediaQuery(theme.breakpoints.down("md"));
+
     const {projects} = useContext(PortfolioContext);
 
     return (
@@ -41,7 +49,13 @@ const ProjectPage = () => {
                 alignItems="center"
             >
                 <Paper className={classes.paper}>
-                    <Grid container justify="center" alignItems="center" spacing={2}>
+                    <Grid
+                        container
+                        justify={mobile ? "center" : tablet ? "space-between" : "space-around"}
+                        direction={mobile ? "column" : "row"}
+                        alignItems="center"
+                        spacing={2}
+                    >
                         {
                             projects?.map((project, index) => {
                                 return (
