@@ -23,10 +23,18 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         list: {
             width: 250,
+            [theme.breakpoints.down("xs")]: {
+                width: "100%"
+            },
         },
         fullList: {
             width: "auto",
         },
+        drawer:{
+            [theme.breakpoints.down("xs")]: {
+                width: "100%"
+            },
+        }
     }),
 );
 
@@ -93,20 +101,9 @@ export const NavigationMenu = () => {
             >
                 <MenuIcon/>
             </IconButton>
-            <Drawer anchor={anchor} open={drawerState[anchor]} onClose={toggleDrawer(anchor, false)}>
+            <Drawer classes={{paper: classes.drawer}} anchor={anchor} open={drawerState[anchor]} onClose={toggleDrawer(anchor, false)}>
                 {list(anchor)}
             </Drawer>
         </div>
     );
 };
-
-/*
-{(["left", "right", "top", "bottom"] as Anchor[]).map((anchor) => (
-                <React.Fragment key={anchor}>
-                    <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-                    <Drawer anchor={anchor} open={drawerState[anchor]} onClose={toggleDrawer(anchor, false)}>
-                        {list(anchor)}
-                    </Drawer>
-                </React.Fragment>
-            ))}
- */
