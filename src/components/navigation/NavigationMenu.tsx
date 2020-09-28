@@ -10,10 +10,12 @@ import {
     ListItem,
     ListItemIcon,
     ListItemText,
+    SvgIcon
 } from "@material-ui/core";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
+import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
         menuButton: {
             marginRight: theme.spacing(2),
         },
-        menuButtonRight:{
+        menuButtonRight: {
             // marginLeft: theme.spacing(25),
             alignSelf: "flex-end"
         },
@@ -50,8 +52,9 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.down("xs")]: {
                 width: "100%"
             },
-            backgroundColor: "#666"
-        }
+            backgroundColor: theme.palette.common.drawerBG,
+            color: theme.palette.common.drawerFontColor,
+        },
     }),
 );
 
@@ -78,42 +81,42 @@ export const NavigationMenu = () => {
     };
 
     const list = (anchor: Anchor) => (
-            <div
-                className={clsx(classes.list, {
-                    [classes.fullList]: anchor === "top" || anchor === "bottom"
-                })}
-                role="presentation"
-                onClick={toggleDrawer(anchor, false)}
-                onKeyDown={toggleDrawer(anchor, false)}
+        <div
+            className={clsx(classes.list, {
+                [classes.fullList]: anchor === "top" || anchor === "bottom"
+            })}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <IconButton
+                edge="start"
+                className={classes.menuButtonRight}
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(anchor, true)}
             >
-                <IconButton
-                    edge="start"
-                    className={classes.menuButtonRight}
-                    color="inherit"
-                    aria-label="menu"
-                    onClick={toggleDrawer(anchor, true)}
-                >
-                    <MenuIcon/>
-                </IconButton>
-                <List>
-                        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-                                <ListItem button key={text}>
-                                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                                    <ListItemText primary={text}/>
-                                </ListItem>
-                        ))}
-                </List>
-                <Divider/>
+                <CloseTwoToneIcon/>
+            </IconButton>
+            <List>
+                {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
+                        <ListItemText primary={text}/>
+                    </ListItem>
+                ))}
+            </List>
+            <Divider/>
 
-                <List>
-                        {["All mail", "Trash", "Spam"].map((text, index) => (
-                                <ListItem button key={text}>
-                                    <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                                    <ListItemText primary={text}/>
-                                </ListItem>
-                        ))}
-                </List>
-            </div>
+            <List>
+                {["All mail", "Trash", "Spam"].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
+                        <ListItemText primary={text}/>
+                    </ListItem>
+                ))}
+            </List>
+        </div>
     );
 
     return (
