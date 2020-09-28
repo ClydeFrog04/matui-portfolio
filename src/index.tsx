@@ -2,8 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {ThemeProvider} from '@material-ui/core/styles';
+import lightTheme from "./themes/darkTheme";
+import {PortfolioProvider} from "./contexts/portfolioContext";
+import {BrowserRouter as Router} from "react-router-dom";
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+    <ThemeProvider theme={lightTheme}>
+        <Router>
+            <PortfolioProvider>
+                <App/>
+            </PortfolioProvider>
+        </Router>
+    </ThemeProvider>,
+    document.getElementById('root')
 );

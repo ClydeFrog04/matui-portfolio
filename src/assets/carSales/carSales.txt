@@ -1,0 +1,9 @@
+Time spent: 2 days
+
+#Contributors: 1
+
+Duties: Create a front end app with react, styled with bootstrap, state management with Redux
+
+Project description: This project is a mini car sales webpage. A user can select a car from the landing page, and then add whatever features are available for that given card. Redux allows for proper function of the car sales page, with features moving to added/available and the total price increasing/decreasing based on those features.
+
+Stack: Reactjs, Redux, Reactstrap/Bootstrap
