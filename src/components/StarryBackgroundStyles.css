@@ -1,0 +1,55 @@
+/*
+    Starry Night DEMO
+    chriscoyier@gmail.com
+    http://chriscoyier.net
+*/
+
+* { margin: 0; padding: 0; }
+
+html { overflow-y: scroll; }
+
+
+@keyframes STAR-MOVE {
+    from {
+        background-position: 5% 5%
+    }
+    to {
+        background-position: 1300% 600%
+    }
+}
+
+#background {
+    background: black url(../assets/backgroundImgs/background.png) repeat 5% 5%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -3;
+
+    -webkit-animation-name: STAR-MOVE;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#midground {
+    background: url(../assets/backgroundImgs/midground.png) repeat 20% 20%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -2;
+
+    -webkit-animation-name: STAR-MOVE;
+    -webkit-animation-duration: 150s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#foreground {
+    background: url(../assets/backgroundImgs/foreground.png) repeat 35% 35%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+
+    -webkit-animation-name: STAR-MOVE;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
