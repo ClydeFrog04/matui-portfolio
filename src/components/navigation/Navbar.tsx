@@ -32,11 +32,12 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
-    children: React.ReactElement;
+    children?: React.ReactElement;
 }
 
 const ElevationScroll = (props:Props) => {
     const {children} = props;
+    if(!children) throw new Error("Navbar children undefined");
     const trigger = useScrollTrigger({
         disableHysteresis: true,
         threshold: 0,

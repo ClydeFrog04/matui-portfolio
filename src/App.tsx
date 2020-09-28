@@ -20,8 +20,6 @@ function App() {
 
     return (
         <div className="App">
-            {/*todo: ask William about this.
-            //@ts-ignore*/}
             <Navbar/>
             <Switch>
                 <Route exact path={"/"}>
