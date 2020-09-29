@@ -30,11 +30,22 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    overflow-x: hidden;
     background-attachment: fixed;
     width: 100%;
+    overflow-x: hidden;
     height: 100vh;
 }
+/*body::-webkit-scrollbar{*/
+/*    width: .66rem;*/
+/*}*/
+/*body::-webkit-scrollbar-track{*/
+/*    border-radius: 4px;*/
+/*    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+/*}*/
+/*body::-webkit-scrollbar-thumb{*/
+/*    border-radius: 4px;*/
+/*    background-color: darkgrey;*/
+/*}*/
 ol, ul {
     list-style: none;
 }
