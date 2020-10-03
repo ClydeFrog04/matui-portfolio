@@ -6,7 +6,6 @@ import {Switch, Route} from "react-router-dom";
 import {PortfolioContext} from "./contexts/portfolioContext";
 import ProjectPage from "./components/project/ProjectPage";
 import StarryBackground from "./components/StarryBackground";
-import Background from "./components/Background";
 
 function App() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -22,7 +21,6 @@ function App() {
     return (
         <div className="App">
             <StarryBackground/>
-            {/*<Background/>*/}
             <Navbar/>
             <Switch>
                 <Route exact path={"/"}>
