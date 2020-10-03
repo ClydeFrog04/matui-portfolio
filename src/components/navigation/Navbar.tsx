@@ -62,7 +62,6 @@ const Navbar = (props:Props) => {
                         <Typography variant="h6" className={classes.title}>
                             Randy Egan
                         </Typography>
-                        <Button color="inherit">Login</Button>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
