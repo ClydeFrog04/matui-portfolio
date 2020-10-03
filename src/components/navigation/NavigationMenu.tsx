@@ -17,6 +17,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import WebIcon from '@material-ui/icons/Web';
+import DescriptionIcon from '@material-ui/icons/Description';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
 
 
@@ -101,26 +103,22 @@ export const NavigationMenu = () => {
                 <CloseTwoToneIcon/>
             </IconButton>
             <List>
-                {/*{["Projects", "About", "Resume"].map((text, index) => (*/}
-                {/*    <ListItem button key={text}>*/}
-                {/*        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>*/}
-                {/*        <ListItemText primary={text}/>*/}
-                {/*    </ListItem>*/}
-                {/*))}*/}
                 <ListItem button key="Projects">
                     <ListItemIcon><WebIcon/></ListItemIcon>
                     <ListItemText primary="Projects"/>
+                </ListItem>
+                <ListItem button key="About Me">
+                    <ListItemIcon><AccountBoxIcon/></ListItemIcon>
+                    <ListItemText primary="About Me"/>
+                </ListItem>
+                <ListItem button key="Resume">
+                    <ListItemIcon><DescriptionIcon/></ListItemIcon>
+                    <ListItemText primary="Resume"/>
                 </ListItem>
             </List>
             <Divider/>
 
             <List>
-                {/*{["Contact me"].map((text, index) => (*/}
-                {/*    <ListItem button key={text}>*/}
-                {/*        <ListItemIcon><AlternateEmailIcon/></ListItemIcon>*/}
-                {/*        <ListItemText primary={text}/>*/}
-                {/*    </ListItem>*/}
-                {/*))}*/}
                 <ListItem button key={"Contact Me"}>
                     <ListItemIcon><AlternateEmailIcon/></ListItemIcon>
                     <ListItemText primary="Contact Me"/>
