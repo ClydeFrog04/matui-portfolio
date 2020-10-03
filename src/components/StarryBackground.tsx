@@ -10,7 +10,7 @@ const StarryBackground: React.FC<StarryBackgroundProps> = () =>{
 
 
     return (
-        <div className={"starryBackground"}>
+        <div className="starryBackground">
             <div id="background"/>
             <div id="midground"/>
             <div id="foreground"/>

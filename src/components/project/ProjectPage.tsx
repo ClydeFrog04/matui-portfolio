@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             flexGrow: 1,
-            opacity: "95%"
+            opacity: "95%",
+            width: "100%"
         },
         paper: {
             width: "75%",
