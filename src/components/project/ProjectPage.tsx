@@ -3,7 +3,6 @@ import Navbar from "../navigation/Navbar";
 import {createStyles, makeStyles, Theme, useTheme} from "@material-ui/core/styles";
 import {Grid, Paper, useMediaQuery} from "@material-ui/core";
 import {PortfolioContext} from "../../contexts/portfolioContext";
-import {IProject} from "../../interfaces/projectInterfaces";
 import ProjectCard from "./ProjectCard";
 
 
@@ -12,7 +11,8 @@ const useStyles = makeStyles((theme: Theme) =>
         root: {
             flexGrow: 1,
             opacity: "95%",
-            width: "100%"
+            width: "100%",
+            margin: "auto"
         },
         paper: {
             width: "75%",
