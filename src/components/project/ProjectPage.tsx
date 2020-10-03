@@ -3,7 +3,6 @@ import Navbar from "../navigation/Navbar";
 import {createStyles, makeStyles, Theme, useTheme} from "@material-ui/core/styles";
 import {Grid, Paper, useMediaQuery} from "@material-ui/core";
 import {PortfolioContext} from "../../contexts/portfolioContext";
-import {IProject} from "../../interfaces/projectInterfaces";
 import ProjectCard from "./ProjectCard";
 
 

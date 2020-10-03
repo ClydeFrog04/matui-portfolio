@@ -15,6 +15,8 @@ import {
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import WebIcon from '@material-ui/icons/Web';
 import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
 
 
@@ -99,22 +101,30 @@ export const NavigationMenu = () => {
                 <CloseTwoToneIcon/>
             </IconButton>
             <List>
-                {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
-                ))}
+                {/*{["Projects", "About", "Resume"].map((text, index) => (*/}
+                {/*    <ListItem button key={text}>*/}
+                {/*        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>*/}
+                {/*        <ListItemText primary={text}/>*/}
+                {/*    </ListItem>*/}
+                {/*))}*/}
+                <ListItem button key="Projects">
+                    <ListItemIcon><WebIcon/></ListItemIcon>
+                    <ListItemText primary="Projects"/>
+                </ListItem>
             </List>
             <Divider/>
 
             <List>
-                {["All mail", "Trash", "Spam"].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
-                ))}
+                {/*{["Contact me"].map((text, index) => (*/}
+                {/*    <ListItem button key={text}>*/}
+                {/*        <ListItemIcon><AlternateEmailIcon/></ListItemIcon>*/}
+                {/*        <ListItemText primary={text}/>*/}
+                {/*    </ListItem>*/}
+                {/*))}*/}
+                <ListItem button key={"Contact Me"}>
+                    <ListItemIcon><AlternateEmailIcon/></ListItemIcon>
+                    <ListItemText primary="Contact Me"/>
+                </ListItem>
             </List>
         </div>
     );
