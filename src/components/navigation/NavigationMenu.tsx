@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import clsx from "clsx";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {useHistory} from "react-router-dom";
 import {
     Button,
     Divider,
@@ -15,6 +16,10 @@ import {
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
+import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import WebIcon from '@material-ui/icons/Web';
+import DescriptionIcon from '@material-ui/icons/Description';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
 
 
@@ -69,6 +74,7 @@ export const NavigationMenu = () => {
         bottom: false,
         right: false,
     });
+    const history = useHistory();
     const [anchor] = useState<Anchor>("left");
 
     const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -99,22 +105,26 @@ export const NavigationMenu = () => {
                 <CloseTwoToneIcon/>
             </IconButton>
             <List>
-                {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
-                ))}
+                <ListItem button key="Projects" onClick={() => history.push("/")}>
+                    <ListItemIcon><WebIcon/></ListItemIcon>
+                    <ListItemText primary="Projects"/>
+                </ListItem>
+                <ListItem button key="About Me">
+                    <ListItemIcon><AccountBoxIcon/></ListItemIcon>
+                    <ListItemText primary="About Me"/>
+                </ListItem>
+                <ListItem button key="Resume">
+                    <ListItemIcon><DescriptionIcon/></ListItemIcon>
+                    <ListItemText primary="Resume"/>
+                </ListItem>
             </List>
             <Divider/>
 
             <List>
-                {["All mail", "Trash", "Spam"].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
-                ))}
+                <ListItem button key={"Contact Me"} onClick={() => history.push("/contact")}>
+                    <ListItemIcon><AlternateEmailIcon/></ListItemIcon>
+                    <ListItemText primary="Contact Me"/>
+                </ListItem>
             </List>
         </div>
     );

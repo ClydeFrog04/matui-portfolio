@@ -40,8 +40,6 @@ const ProjectPage = () => {
 
     return (
         <>
-            {/*
-            //@ts-ignore*/}
             <Navbar/>
             <Grid
                 container

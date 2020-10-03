@@ -25,10 +25,10 @@ html { overflow-y: scroll; }
 }
 
 #background {
-    background: url(../assets/backgroundImgs/background.png) repeat 5% 5%;
+    background: url(../assets/backgroundImgs/starSet2/backgroundStar.png) repeat 5% 5%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -3;
+    z-index: -300;
 
     -webkit-animation-name: STAR-MOVE;
     -webkit-animation-duration: 200s;
@@ -37,10 +37,10 @@ html { overflow-y: scroll; }
 }
 
 #midground {
-    background: url(../assets/backgroundImgs/midground.png) repeat 20% 20%;
+    background: url(../assets/backgroundImgs/starSet2/midgroundStar.png) repeat 20% 20%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -2;
+    z-index: -299;
 
     -webkit-animation-name: STAR-MOVE;
     -webkit-animation-duration: 150s;
@@ -49,10 +49,10 @@ html { overflow-y: scroll; }
 }
 
 #foreground {
-    background: url(../assets/backgroundImgs/foreground.png) repeat 35% 35%;
+    background: url(../assets/backgroundImgs/starSet2/foregroundStar.png) repeat 35% 35%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
+    z-index: -298;
 
     -webkit-animation-name: STAR-MOVE;
     -webkit-animation-duration: 100s;

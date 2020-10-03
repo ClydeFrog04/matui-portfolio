@@ -6,6 +6,7 @@ import {Switch, Route} from "react-router-dom";
 import {PortfolioContext} from "./contexts/portfolioContext";
 import ProjectPage from "./components/project/ProjectPage";
 import StarryBackground from "./components/StarryBackground";
+import ContactForm from "./components/forms/ContactForm";
 
 function App() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -25,6 +26,9 @@ function App() {
             <Switch>
                 <Route exact path={"/"}>
                     <ProjectPage/>
+                </Route>
+                <Route path={"/contact"}>
+                    <ContactForm/>
                 </Route>
             </Switch>
         </div>

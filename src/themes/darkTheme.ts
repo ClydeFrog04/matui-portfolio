@@ -10,6 +10,7 @@ const robotoFont = "Roboto, sans-serif";
 const appBarBG = "#4c4c4c";
 const appBarFont = "rgba(0,0,0,.5)";
 const drawerBG = "#666";
+const containerBG = "#444";
 const drawerFontColor = "#ddd";
 const red = "#ff0000";
 const black = "#000";
@@ -22,6 +23,7 @@ export default createMuiTheme({
             appBarFont: appBarFont,
             drawerBG: drawerBG,
             drawerFontColor: drawerFontColor,
+            containerBG: containerBG
         }
     },
     typography: {
