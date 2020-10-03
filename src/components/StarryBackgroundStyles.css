@@ -18,21 +18,14 @@ html { overflow-y: scroll; }
     }
 }
 
-/*body{*/
-/*    background-attachment: fixed;*/
-/*    overflow-x: hidden;*/
-/*    background-attachment: fixed;*/
-/*}*/
-
-/*.starryBackground{*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    background-attachment: fixed;*/
-/*    overflow-x: hidden;*/
-/*}*/
+.starryBackground {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
 
 #background {
-    background: black url(../assets/backgroundImgs/background.png) repeat scroll 5% 5%;
+    background: url(../assets/backgroundImgs/background.png) repeat 5% 5%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -3;
