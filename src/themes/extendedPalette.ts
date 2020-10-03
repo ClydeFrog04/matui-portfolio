@@ -7,6 +7,7 @@ declare module "@material-ui/core/styles/createPalette" {
         appBarFont: string;
         drawerBG: string;
         drawerFontColor: string;
+        containerBG: string;
     }
 
     interface Palette {
