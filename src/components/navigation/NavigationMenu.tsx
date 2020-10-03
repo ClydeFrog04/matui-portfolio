@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import clsx from "clsx";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {useHistory} from "react-router-dom";
 import {
     Button,
     Divider,
@@ -73,6 +74,7 @@ export const NavigationMenu = () => {
         bottom: false,
         right: false,
     });
+    const history = useHistory();
     const [anchor] = useState<Anchor>("left");
 
     const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -103,7 +105,7 @@ export const NavigationMenu = () => {
                 <CloseTwoToneIcon/>
             </IconButton>
             <List>
-                <ListItem button key="Projects">
+                <ListItem button key="Projects" onClick={() => history.push("/")}>
                     <ListItemIcon><WebIcon/></ListItemIcon>
                     <ListItemText primary="Projects"/>
                 </ListItem>
@@ -119,7 +121,7 @@ export const NavigationMenu = () => {
             <Divider/>
 
             <List>
-                <ListItem button key={"Contact Me"}>
+                <ListItem button key={"Contact Me"} onClick={() => history.push("/contact")}>
                     <ListItemIcon><AlternateEmailIcon/></ListItemIcon>
                     <ListItemText primary="Contact Me"/>
                 </ListItem>

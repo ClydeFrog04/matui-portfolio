@@ -9,7 +9,7 @@ import {
     InputLabel,
     TextareaAutosize,
     Paper,
-    Theme
+    Theme, Button, FormGroup
 } from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import Navbar from "../navigation/Navbar";
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         paper: {
             width: "50%",
-            height: "50vh",
+            height: "75vh",
             backgroundColor: theme.palette.common.containerBG,
             display: "flex",
             justifyContent: "center",
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
         helperText: {
             color: "white"
         },
-        textArea:{
+        textArea: {
             height: "60%",
             backgroundColor: "#e0e0e0",
             borderRadius: "4px",
@@ -80,16 +80,18 @@ const ContactForm = () => {
                 alignItems="center"
             >
                 <Paper className={classes.paper}>
-                    <form className={classes.form}>
-                        <FormLabel className={classes.title}>Contact me</FormLabel>
-                        <FormControl>
-                            <InputLabel className={classes.inputLabel} htmlFor="my-input">Email address</InputLabel>
-                            <Input className={classes.input} id="my-input" aria-describedby="my-helper-text"/>
-                            <FormHelperText className={classes.helperText} id="my-helper-text">We'll never share your
-                                email.</FormHelperText>
-                        </FormControl>
-                        <textarea className={classes.textArea}/>
-                    </form>
+                        <FormGroup className={classes.form}>
+                            <FormLabel className={classes.title}>Contact me</FormLabel>
+                            <FormControl>
+                                <InputLabel className={classes.inputLabel} htmlFor="my-input">Email address</InputLabel>
+                                <Input className={classes.input} id="my-input" aria-describedby="my-helper-text"/>
+                                <FormHelperText className={classes.helperText} id="my-helper-text">We'll never share
+                                    your
+                                    email.</FormHelperText>
+                            </FormControl>
+                            <textarea className={classes.textArea}/>
+                            <Button variant="contained">Send!</Button>
+                        </FormGroup>
                 </Paper>
             </Grid>
         </>
