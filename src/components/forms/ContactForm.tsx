@@ -28,7 +28,10 @@ const useStyles = makeStyles((theme: Theme) =>
             backgroundColor: theme.palette.common.containerBG,
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
+            [theme.breakpoints.down("sm")]: {
+                width: "100%",
+            },
         },
         form: {
             display: "flex",
@@ -36,7 +39,11 @@ const useStyles = makeStyles((theme: Theme) =>
             alignItems: "left",
             flexDirection: "column",
             width: "66%",
-            height: "66%"
+            height: "66%",
+            [theme.breakpoints.down("sm")]: {
+                width: "90%",
+                height: "100%"
+            },
         },
         input: {
             color: "black",
