@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
         },
         title: {
-            color: "white"
+            color: "white",
         },
         helperText: {
             color: "white"

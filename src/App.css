@@ -1,6 +1,7 @@
 body::-webkit-scrollbar{
     border: white;
     width: .75rem;
+    border-radius: 4px;
 }
 body::-webkit-scrollbar-track{
      border-radius: 4px;
