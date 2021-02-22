@@ -11,6 +11,8 @@ interface IPortfolioContext {
     setChangingPages: React.Dispatch<React.SetStateAction<boolean>>;
     history: any;//how to type history properly
     animationDuration: number;
+    aboutMeOpen: boolean;
+    setAboutMeOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const PortfolioContext: Context<Partial<IPortfolioContext>> = createContext({});
@@ -18,6 +20,7 @@ export const PortfolioContext: Context<Partial<IPortfolioContext>> = createConte
 export const PortfolioProvider: React.FC = ({ children }) => {
     const [projects, setProjects] = useState<IProject[]>(projectsCompleted);
     const [changingPages, setChangingPages] = useState(false);
+    const [aboutMeOpen, setAboutMeOpen] = useState<boolean>(false);
     const history = useHistory();
     const animationDuration = 0.5;
 
@@ -30,7 +33,9 @@ export const PortfolioProvider: React.FC = ({ children }) => {
                 changingPages,
                 setChangingPages,
                 history,
-                animationDuration
+                animationDuration,
+                aboutMeOpen,
+                setAboutMeOpen
             }}
         >
             {children}

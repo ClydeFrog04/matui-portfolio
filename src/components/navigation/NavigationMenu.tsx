@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import clsx from "clsx";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import {useHistory} from "react-router-dom";
@@ -21,6 +21,8 @@ import WebIcon from '@material-ui/icons/Web';
 import DescriptionIcon from '@material-ui/icons/Description';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
+import AboutMe from "../About/AboutMe";
+import {PortfolioContext} from "../../contexts/portfolioContext";
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -76,6 +78,7 @@ export const NavigationMenu = () => {
     });
     const history = useHistory();
     const [anchor] = useState<Anchor>("left");
+    const {aboutMeOpen, setAboutMeOpen} = useContext(PortfolioContext);
 
     const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
@@ -109,7 +112,7 @@ export const NavigationMenu = () => {
                     <ListItemIcon><WebIcon/></ListItemIcon>
                     <ListItemText primary="Projects"/>
                 </ListItem>
-                <ListItem button key="About Me">
+                <ListItem button key="About Me" onClick={() => {if(setAboutMeOpen) setAboutMeOpen(!aboutMeOpen)}}>
                     <ListItemIcon><AccountBoxIcon/></ListItemIcon>
                     <ListItemText primary="About Me"/>
                 </ListItem>
