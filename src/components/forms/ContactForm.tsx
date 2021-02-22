@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: "center",
             alignItems: "center",
             [theme.breakpoints.down("sm")]: {
-                width: "100%",
+                width: "90vw",
             },
         },
         form: {
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
         },
         title: {
-            color: "white"
+            color: "white",
         },
         helperText: {
             color: "white"

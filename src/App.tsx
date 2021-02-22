@@ -7,6 +7,7 @@ import {PortfolioContext} from "./contexts/portfolioContext";
 import ProjectPage from "./components/project/ProjectPage";
 import StarryBackground from "./components/StarryBackground";
 import ContactForm from "./components/forms/ContactForm";
+import AboutMe from "./components/About/AboutMe";
 
 function App() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -17,12 +18,13 @@ function App() {
         }),
     );
     const classes = useStyles();
-    const {projects} = useContext(PortfolioContext);
+    const {projects, aboutMeOpen} = useContext(PortfolioContext);
 
     return (
         <div className="App">
             <StarryBackground/>
             <Navbar/>
+            <AboutMe />
             <Switch>
                 <Route exact path={"/"}>
                     <ProjectPage/>
