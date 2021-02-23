@@ -31,7 +31,7 @@ const MazeGame = () => {
     });
 
     return (
-        <div style={{maxWidth: "100%", width: "100vw", height: divHeight}}>
+        <div style={{maxWidth: "100%", width: "100vw", height: divHeight, textAlign:"center"}}>
             <Unity width={"100vw"} height={divHeight} unityContext={unityContext}/>
         </div>
     );
