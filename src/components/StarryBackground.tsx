@@ -1,4 +1,5 @@
-import React from "react"
+import React, {useContext} from "react";
+import {PortfolioContext} from "../contexts/portfolioContext";
 
 
 interface StarryBackgroundProps {
@@ -6,10 +7,11 @@ interface StarryBackgroundProps {
 
 }
 const StarryBackground: React.FC<StarryBackgroundProps> = () =>{
-
+    const {unityGamePlaying} = useContext(PortfolioContext);
 
 
     return (
+        unityGamePlaying ? null :
         <div className="starryBackground">
             <div id="background"/>
             <div id="midground"/>

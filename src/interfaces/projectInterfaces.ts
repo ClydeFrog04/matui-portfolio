@@ -6,6 +6,7 @@ export interface IProject {
     role: string;
     description: string;
     stack: string;
+    route?: string;
 }
 
 export interface IImage {

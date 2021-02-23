@@ -8,6 +8,7 @@ import ProjectPage from "./components/project/ProjectPage";
 import StarryBackground from "./components/StarryBackground";
 import ContactForm from "./components/forms/ContactForm";
 import AboutMe from "./components/About/AboutMe";
+import MazeGame from "./components/MazeGame/MazeGame";
 
 function App() {
     const useStyles = makeStyles((theme: Theme) =>
@@ -31,6 +32,9 @@ function App() {
                 </Route>
                 <Route path={"/contact"}>
                     <ContactForm/>
+                </Route>
+                <Route path={"/mazeGame"}>
+                    <MazeGame/>
                 </Route>
             </Switch>
         </div>

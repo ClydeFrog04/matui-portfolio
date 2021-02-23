@@ -1,6 +1,7 @@
-import React from "react"
+import React, {MouseEvent} from "react";
 import {IProject} from "../../interfaces/projectInterfaces";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {useHistory} from "react-router-dom";
 import {
     Button,
     Card,
@@ -20,8 +21,7 @@ interface ProjectCardProps {
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        root: {
-        },
+        root: {},
         media: {
             height: 238
 
@@ -29,16 +29,27 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-const ProjectCard: React.FC<ProjectCardProps> = ({project}) =>{
+const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
     console.log("creating project card");
-    const {images,
+    const history = useHistory();
+    const {
+        images,
         name,
         timeSpent,
         numContributors,
         role,
         description,
-        stack} = project;
+        stack,
+        route
+    } = project;
     const classes = useStyles();
+
+    const learnMoreLinks = () => {
+        console.log(route);
+        if(route){
+            history.push(`/${route}`);
+        }
+    };
 
 
     return (
@@ -60,13 +71,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) =>{
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary">
+                    <Button onClick={learnMoreLinks} size="small" color="primary">
                         Learn More
                     </Button>
                 </CardActions>
             </Card>
         </div>
     );
-}
+};
 
 export default ProjectCard;

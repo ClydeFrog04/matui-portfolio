@@ -12,7 +12,19 @@ import addFeature from "../assets/carSales/AddFeatures.png";
 
 import sleepTracker from "../assets/sleepTracker/GraphPage.png";
 
+import mazeGame from "../assets/mazeGame/MazeGame.png"
+
 export const projectsCompleted:IProject[] =[
+    {
+        images: [{src: mazeGame, alt: "A simple maze game!"}],
+        name: "Penguin Labyrinth",
+        timeSpent: "3 months",
+        numContributors: 1,
+        role:"Game Developer",
+        description: "A maze game race against the clock to beat as many levels as you can! Can you help the penguin eat his fish?!",
+        stack: "Unity, c#",
+        route: "mazeGame"
+    },
     {
         images: [{src: quizApp, alt: "A trivia quiz game"}, {src: startPage, alt: "A trivia quiz game"}],
         name: "quizApp",
