@@ -61,6 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                         className={classes.media}
                         image={images[0].src}
                         title={images[0].alt}
+                        onClick={learnMoreLinks}
                     />
                     <CardContent>
                         {/*todo: create typography styles in theme*/}
@@ -72,7 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                 </CardActionArea>
                 <CardActions>
                     <Button onClick={learnMoreLinks} size="small" color="primary">
-                        Learn More
+                        {(route && route === "mazeGame") ? "Play Now!" : null}
                     </Button>
                 </CardActions>
             </Card>
