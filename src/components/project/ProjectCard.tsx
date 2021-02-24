@@ -40,13 +40,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
         role,
         description,
         stack,
-        route
+        route,
+        learnMore
     } = project;
     const classes = useStyles();
 
-    const learnMoreLinks = () => {
+    const playLinks = () => {
         console.log(route);
-        if(route){
+        if (route) {
             history.push(`/${route}`);
         }
     };
@@ -61,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                         className={classes.media}
                         image={images[0].src}
                         title={images[0].alt}
-                        onClick={learnMoreLinks}
+                        onClick={playLinks}
                     />
                     <CardContent>
                         {/*todo: create typography styles in theme*/}
@@ -72,9 +73,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button onClick={learnMoreLinks} size="small" color="primary">
+                    <Button onClick={playLinks} size="small" color="primary">
                         {(route && route === "mazeGame") ? "Play Now!" : null}
                     </Button>
+                    {learnMore ?
+                        <a href={learnMore} target={"blank"} style={{textDecoration: "none"}}>
+                            <Button size="small" color="primary">
+                                Learn More!
+                            </Button>
+                        </a> : null
+                    }
                 </CardActions>
             </Card>
         </div>

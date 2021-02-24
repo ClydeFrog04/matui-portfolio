@@ -23,7 +23,8 @@ export const projectsCompleted:IProject[] =[
         role:"Game Developer",
         description: "A maze game race against the clock to beat as many levels as you can! Can you help the penguin eat his fish?!",
         stack: "Unity, c#",
-        route: "mazeGame"
+        route: "mazeGame",
+        learnMore: "https://egan-randal.medium.com/penguin-labyrinth-b08baf9e9e41"
     },
     {
         images: [{src: quizApp, alt: "A trivia quiz game"}, {src: startPage, alt: "A trivia quiz game"}],
