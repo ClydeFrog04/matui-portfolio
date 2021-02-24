@@ -7,6 +7,7 @@ export interface IProject {
     description: string;
     stack: string;
     route?: string;
+    learnMore?: string;
 }
 
 export interface IImage {
