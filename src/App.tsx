@@ -60,7 +60,7 @@ function App() {
             <Navbar/>
             <AboutMe />
             <Modal
-                open={aboutMeOpen!}
+                open={wip}
                 onClose={handleClose}
                 className={classes.container}>
                 <div className={classes.modal}>
