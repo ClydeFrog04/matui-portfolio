@@ -3,7 +3,7 @@ import Modal from '@material-ui/core/Modal';
 import {Avatar, createStyles, Theme} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {PortfolioContext} from "../../contexts/portfolioContext";
-import profilePicture from "../../assets/meProfilePicture.png";
+import profilePicture from "../../assets/meProfilePictureSmall.png";
 
 
 
