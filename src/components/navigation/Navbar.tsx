@@ -60,7 +60,7 @@ const Navbar = (props:Props) => {
                         {/*todo: menu component goes here*/}
                         <NavigationMenu/>
                         <Typography variant="h6" className={classes.title}>
-                            Randy Egan
+                            Randi Egan
                         </Typography>
                     </Toolbar>
                 </AppBar>

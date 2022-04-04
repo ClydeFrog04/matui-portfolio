@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme: Theme) =>
             left: `calc(50% - ${modalWidth / 2}vw)`,
             display: "flex",
             flexDirection: "column",
-            textAlign: "center"
+            textAlign: "center",
+            borderRadius: "4px"
 
         },
         name:{
@@ -52,8 +53,8 @@ const AboutMe = () =>{
         onClose={handleClose}
         className={classes.container}>
             <div className={classes.modal}>
-                <h1 className={classes.name}>Randy Egan</h1>
-                <span className={classes.info}>Hi there! Thanks for taking the time to checkout my site! It's still a work in progress but I hope you enjoy your time here!  After graduating with an associates degree in computer science, I began exploring my love for programming. I found that I enjoy learning new skills, as well as honing my current skills. I’ve written code in many languages, with bigger projects being written with java, c# and various js libraries. I love working on exciting new projects and would love the opportunity to bring my programming and leadership skills to the table!</span>
+                <h1 className={classes.name}>Randi Egan</h1>
+                <span className={classes.info}>Hi there! I'm Randi! Thanks for taking the time to checkout my site! It's still a work in progress but I hope you enjoy your time here!<br/>I'm currently a software developer at Dish Network. In my time at Dish I've had the opportunity to work on a few different projects with very different tech stacks. I've gotten a chance to work on web development, mobile development, and embedded development! Before starting my career, I went to school for game development and got an associates degree in game development!</span>
                 <span className={classes.info}>When I'm not writing code, I enjoy playing drums, hockey, spending time outdoors, and playing video games.</span>
             </div>
         </Modal>
