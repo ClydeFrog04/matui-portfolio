@@ -10,7 +10,7 @@ const unityContext = new UnityContext({
 });
 
 const navBarHeight = 64;
-const divHeight = `calc(100vh - ${navBarHeight}px)`;
+const divHeight = `calc(99vh - ${navBarHeight}px)`;
 const styles = {
     container: {
         width: "100vw",
@@ -31,8 +31,8 @@ const MazeGame = () => {
     });
 
     return (
-        <div style={{maxWidth: "100%", width: "100vw", height: divHeight, textAlign:"center"}}>
-            <Unity width={"100vw"} height={divHeight} unityContext={unityContext}/>
+        <div style={{maxWidth: "100%", width: "99vw", height: divHeight, textAlign:"center"}}>
+            <Unity width={"99vw"} height={divHeight} unityContext={unityContext}/>
         </div>
     );
 };
